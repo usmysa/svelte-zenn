@@ -46,8 +46,10 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/bun.lockb') }}
+      - name: Check Svelte
+        run: (cd apps/web && bun run check)
       - name: Check Type
-        run: bun run typecheck
+        run: turbo typecheck
 
   lint:
     needs: [setup]
