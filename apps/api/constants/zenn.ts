@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { ObjectKeysEnum } from "@/libs";
+import type { z } from "zod";
 
 export const TOP_PAGE_URL = "https://zenn.dev";
 
