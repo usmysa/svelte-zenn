@@ -1,0 +1,8 @@
+"apps:api":
+  - apps/api/**/*
+
+"apps:web":
+  - apps/web/**/*
+
+"packages":
+  - packages/**/*
