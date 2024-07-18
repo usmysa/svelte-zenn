@@ -14,7 +14,7 @@ type Params = {
 export async function GET(_: Request, { params }: { params: Params }) {
   const parsed = categoryEnum.safeParse(params.category);
   if (!parsed.success) {
-    return NextResponse.json({ error: "Invalid parameters" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid parameter" }, { status: 400 });
   }
 
   try {
@@ -24,7 +24,7 @@ export async function GET(_: Request, { params }: { params: Params }) {
     return NextResponse.json(parseNextData(html, CATEGORY_MAP[parsed.data]));
   } catch (err) {
     return NextResponse.json(
-      { error: (err as Error).message },
+      { error: "Internal Server Error", message: (err as Error).message },
       { status: 500 }
     );
   }
