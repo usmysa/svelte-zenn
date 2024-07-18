@@ -13,6 +13,9 @@
     "format-and-lint": {},
     "format-and-lint:fix": {
       "cache": false
+    },
+    "typecheck": {
+      "cache": false
     }
   }
 }
