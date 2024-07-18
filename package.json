@@ -4,8 +4,9 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "format": "turbo format-and-lint",
-    "format:fix": "turbo format-and-lint:fix"
+    "format-and-lint": "turbo format-and-lint",
+    "format-and-lint:fix": "turbo format-and-lint:fix",
+    "typecheck": "turbo typecheck"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
