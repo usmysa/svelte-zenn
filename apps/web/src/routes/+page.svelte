@@ -1,59 +1,27 @@
-<script>
-import welcome_fallback from "$lib/images/svelte-welcome.png";
-import welcome from "$lib/images/svelte-welcome.webp";
-import Counter from "./Counter.svelte";
+<script lang="ts">
+import ExploreNav from "$lib/components/layouts/ExploreNav.svelte";
+
+const sections = [
+  { title: "Tech", helpText: "プログラミングなどの技術についての知見" },
+  { title: "Ideas", helpText: "キャリア、チーム、仕事論など" },
+  { title: "Books", helpText: undefined },
+  { title: "Featured", path: undefined },
+];
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Zenn | エンジニアのための情報共有コミュニティ</title>
+	<meta name="description" content="Zennはエンジニアが技術・開発についての知見をシェアする場所です。本の販売や、読者からのバッジの受付により対価を受け取ることができます。" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<div class="flex flex-direction:column">
+	<ExploreNav />
+	{#each sections as section}
+		<section>
+			<h3>{section.title}</h3>
+			{#if section.helpText}
+				<p>{section.helpText}</p>
+			{/if}
+		</section>
+	{/each}
+</div>
