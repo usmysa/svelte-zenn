@@ -1,14 +1,9 @@
-import {
-  CATEGORY_MAP,
-  type CategoryType,
-  TOP_PAGE_URL,
-  categoryEnum,
-} from "@/constants";
+import { CATEGORY_MAP, TOP_PAGE_URL, categoryEnum } from "@/constants";
 import { parseNextData } from "@/libs";
 import { NextResponse } from "next/server";
 
 type Params = {
-  category: CategoryType;
+  category: string;
 };
 
 export async function GET(_: Request, { params }: { params: Params }) {

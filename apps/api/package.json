@@ -8,6 +8,7 @@
     "start": "next start",
     "format-and-lint": "biome check .",
     "format-and-lint:fix": "biome check . --write",
+    "test": "vitest",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -19,9 +20,11 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "*",
+    "@types/bun": "latest",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "fetch-mock": "^10.1.0"
   },
   "packageManager": "bun@1.1.20"
 }
