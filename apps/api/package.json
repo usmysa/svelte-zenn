@@ -9,7 +9,7 @@
     "format-and-lint": "biome check .",
     "format-and-lint:fix": "biome check . --write",
     "test": "vitest",
-    "typecheck": "tsc"
+    "type-check": "tsc"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",

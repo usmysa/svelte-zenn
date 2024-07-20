@@ -60,7 +60,7 @@ jobs:
       - name: Check Svelte
         run: (cd apps/web && bun run check)
       - name: Check Type
-        run: bun run typecheck
+        run: bun run type-check
 
   lint:
     needs: [setup]

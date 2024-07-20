@@ -9,7 +9,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format-and-lint": "biome check .",
     "format-and-lint:fix": "biome check . --write",
-    "typecheck": "tsc"
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
