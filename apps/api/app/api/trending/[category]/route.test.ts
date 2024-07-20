@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import fetchMock from "fetch-mock";
 import { CATEGORY_MAP, TOP_PAGE_URL } from "@/constants";
+import fetchMock from "fetch-mock";
 import { GET } from "./route";
 
 describe("GET", () => {
@@ -12,7 +12,7 @@ describe("GET", () => {
 
       expect(res.status).toBe(200);
       expect(json).not.toEqual({});
-    }
+    },
   );
 
   test("should return error with status 400 when category is invalid", async () => {
