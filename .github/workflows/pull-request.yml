@@ -28,6 +28,17 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+  labeler:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Labeling
+        uses: actions/labeler@v5
+        with:
+          sync-labels: true
+
   type-check:
     needs: [setup]
     runs-on: ubuntu-latest
