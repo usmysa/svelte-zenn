@@ -1,4 +1,4 @@
-name: Auto Approve
+name: AutoApprove
 
 on: pull_request_target
 
@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: ! github.event.pull_request.draft
+    if: github.event.pull_request.draft == false
     steps:
       - uses: hmarr/auto-approve-action@v4
