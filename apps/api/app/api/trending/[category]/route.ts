@@ -1,14 +1,9 @@
-import {
-  CATEGORY_MAP,
-  type CategoryType,
-  TOP_PAGE_URL,
-  categoryEnum,
-} from "@/constants";
-import { parseNextData } from "@/libs";
 import { NextResponse } from "next/server";
+import { CATEGORY_MAP, TOP_PAGE_URL, categoryEnum } from "@/constants";
+import { parseNextData } from "@/libs";
 
 type Params = {
-  category: CategoryType;
+  category: string;
 };
 
 export async function GET(_: Request, { params }: { params: Params }) {
@@ -25,7 +20,7 @@ export async function GET(_: Request, { params }: { params: Params }) {
   } catch (err) {
     return NextResponse.json(
       { error: "Internal Server Error", message: (err as Error).message },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
