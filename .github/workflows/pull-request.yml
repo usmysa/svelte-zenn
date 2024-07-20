@@ -34,8 +34,10 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - name: Set Label
+      - name: Auto Labeling
         uses: actions/labeler@v5
+        with:
+          sync-labels: true
 
   type-check:
     needs: [setup]
