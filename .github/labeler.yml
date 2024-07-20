@@ -1,8 +1,17 @@
-"apps:api":
-  - apps/api/**/*
+apps:api:
+  - changed-files:
+      - any-glob-to-any-file: apps/api/**
 
-"apps:web":
-  - apps/web/**/*
+apps:web:
+  - changed-files:
+      - any-glob-to-any-file: apps/web/**
 
-"packages":
-  - packages/**/*
+packages:
+  - changed-files:
+      - any-glob-to-any-file: packages/**
+
+test:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.test.ts"
+          - "**/*.test.tsx"
