@@ -1,5 +1,5 @@
 <script lang="ts">
-import List from "$lib/components/displays/List.svelte";
+import List from "components/displays/List.svelte";
 
 const links = [
   {

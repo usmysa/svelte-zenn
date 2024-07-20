@@ -1,5 +1,5 @@
 <script>
-import LoginButton from "$lib/components/buttons/LoginButton.svelte";
+import LoginButton from "components/buttons/LoginButton.svelte";
 </script>
 
 <header class="px:40 flex">

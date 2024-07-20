@@ -1,5 +1,5 @@
 <script lang="ts">
-import ExploreNav from "$lib/components/layouts/ExploreNav.svelte";
+import ExploreNav from "components/layouts/ExploreNav.svelte";
 
 const sections = [
   { title: "Tech", helpText: "プログラミングなどの技術についての知見" },
