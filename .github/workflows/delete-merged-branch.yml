@@ -7,6 +7,8 @@ on:
 
 jobs:
   delete-merged-branch:
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
