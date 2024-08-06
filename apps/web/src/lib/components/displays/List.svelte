@@ -2,7 +2,7 @@
 export let list: T[];
 </script>
 
-<ul>
+<ul class={$$props.class}>
   {#each list as value}
     <li>
       <slot {value} />

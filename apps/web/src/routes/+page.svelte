@@ -14,7 +14,7 @@ const sections = [
 	<meta name="description" content="Zennはエンジニアが技術・開発についての知見をシェアする場所です。本の販売や、読者からのバッジの受付により対価を受け取ることができます。" />
 </svelte:head>
 
-<div class="flex flex-direction:column">
+<div class="flex flex-col">
 	<ExploreNav />
 	{#each sections as section}
 		<section>
